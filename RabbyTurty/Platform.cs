@@ -45,7 +45,7 @@ public class MovingPlatform : MonoBehaviour
   }
 
 
-  private void MovePlatformWithButton(Collider2D other)
+  private void MovePlatformWithButton(Collider2D other) /* might need to name method OnTriggerEnter2D(Collider2D other) */
   {
     if (other.tag == "Player" && !hasSwitched)
     {
@@ -53,7 +53,6 @@ public class MovingPlatform : MonoBehaviour
       theSR.sprite = downButton;
       isPressed = true;
     }
-
   }
 
 
