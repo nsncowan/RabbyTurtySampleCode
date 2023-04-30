@@ -27,7 +27,7 @@ public class Switch : MonoBehaviour
   {
     if (other.tag == "Player" && !hasSwitched)
     {
-      objectToSwitch.SetActive(false);
+      objectToSwitch.SetActive(false); 
       spriteRenderer.sprite = downButton;
       hasSwitched = true;
     }
