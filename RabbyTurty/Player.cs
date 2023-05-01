@@ -30,6 +30,8 @@ public class PlayerController : MonoBehaviour
     if(isGrounded)
     {
       canDoubleJump = true;
+      // reset drag
+      GetComponent<Rigidbody2D>().drag = 0;
     }
     if(Input.GetButtonDown("Jump"))
     {
@@ -42,6 +44,8 @@ public class PlayerController : MonoBehaviour
         if(canDoubleJump)
         {
           rigidBody.velocity = new Vector2(rigidBody.velocity.x, jumpForce);
+          // increase drag for Gliding
+          GetComponent<Rigidbody2D>().drag += 20;
           canDoubleJump = false;
         }
       }
